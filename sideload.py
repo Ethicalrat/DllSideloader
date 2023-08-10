@@ -17,7 +17,8 @@ random_name_dll = random_name + ".dll"
 shutil.copy(target_dll, os.path.join(current_dir, random_name_dll))
 
 
-#Generate exports for the target dll. Code taken from
+# Generate exports for the target dll.
+# Code taken from https://github.com/byt3bl33d3r/NimDllSideload/blob/main/gen_def.py
 
 dll_path = pathlib.Path(random_name_dll)
 dll = pefile.PE(dll_path)
